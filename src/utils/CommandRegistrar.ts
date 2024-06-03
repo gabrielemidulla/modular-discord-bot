@@ -1,7 +1,7 @@
 import { REST, Routes } from "discord.js";
-import { Logger } from "./utils/Logger";
+import { Logger } from "./Logger";
 import { CustomClient } from "./CustomClient";
-import { Color } from "./utils/Color";
+import { Color } from "./Color";
 
 export class CommandRegistrar {
     async register() {
@@ -10,7 +10,7 @@ export class CommandRegistrar {
         rest.setToken(process.env.DISCORD_TOKEN);
 
         try {
-            Logger.success(`Started refreshing ${Color.Bright}${CustomClient.getInstance().commands.size}${Color.Reset} application (/) commands.`);
+            Logger.log(`Refreshing ${Color.Bright}${CustomClient.getInstance().commands.size}${Color.Reset} application (/) commands...`);
 
             const commands = CustomClient.getInstance().commands.map(command => command.data.toJSON());
 

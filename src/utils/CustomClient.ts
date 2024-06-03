@@ -1,5 +1,5 @@
 import { Client, ClientOptions, Collection } from "discord.js";
-import { Command } from "./base/Command";
+import { Command } from "../base/Command";
 import { Logger } from "utils/Logger";
 
 export class CustomClient extends Client {

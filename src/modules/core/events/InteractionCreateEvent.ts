@@ -1,4 +1,4 @@
-import { Client, Events } from "discord.js";
+import { Events } from "discord.js";
 import { Event } from "../../../base/Event";
 import { Logger } from "../../../utils/Logger";
 import { CustomInteraction } from "base/CustomInteraction";
