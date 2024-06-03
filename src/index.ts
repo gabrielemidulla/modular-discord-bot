@@ -1,8 +1,6 @@
 import { GatewayIntentBits } from 'discord.js';
 import { config } from 'dotenv';
 import { CustomClient } from './utils/CustomClient';
-import { CommandLoader } from './loaders/CommandLoader';
-import { EventLoader } from './loaders/EventLoader';
 import { CommandRegistrar } from './utils/CommandRegistrar';
 import { ModuleLoader } from 'loaders/ModuleLoader';
 

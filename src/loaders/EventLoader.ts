@@ -1,7 +1,5 @@
 import { Loader } from "../base/Loader";
-import fs from "node:fs";
 import path from "node:path";
-import { pathToFileURL } from "url";
 import { Logger } from "../utils/Logger";
 import { Color } from "../utils/Color";
 import { CustomClient } from "../utils/CustomClient";

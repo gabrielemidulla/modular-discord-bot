@@ -1,11 +1,8 @@
-import { Loader } from "../base/Loader";
 import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "url";
 import { Logger } from "./Logger";
 import { Color } from "./Color";
-import { CustomClient } from "./CustomClient";
-import { Module } from "base/Module";
 
 export class FileImporter<T> {
     public func: (item: T, file: string) => Promise<void>;
