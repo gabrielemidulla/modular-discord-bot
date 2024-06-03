@@ -1,6 +1,6 @@
 import { Client, Events } from "discord.js";
-import { Event } from "../../base/Event";
-import { Logger } from "../../utils/Logger";
+import { Event } from "../../../base/Event";
+import { Logger } from "../../../utils/Logger";
 
 
 export default class ReadyEvent extends Event<Client> {

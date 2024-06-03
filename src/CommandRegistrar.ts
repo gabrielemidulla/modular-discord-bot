@@ -22,7 +22,7 @@ export class CommandRegistrar {
                 { body: commands },
             );
 
-            Logger.success(`Successfully reloaded ${Color.Bright}${data.length}${Color.Reset} application (/) commands.`);
+            Logger.success(`Successfully reloaded ${Color.Bright}${(data as any[]).length}${Color.Reset} application (/) commands.`);
         } catch (error) {
             Logger.error(error);
         }

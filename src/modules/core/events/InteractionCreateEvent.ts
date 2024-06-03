@@ -1,6 +1,6 @@
 import { Client, Events } from "discord.js";
-import { Event } from "../../base/Event";
-import { Logger } from "../../utils/Logger";
+import { Event } from "../../../base/Event";
+import { Logger } from "../../../utils/Logger";
 import { CustomInteraction } from "base/CustomInteraction";
 
 export default class InteractionCreateEvent extends Event<CustomInteraction> {
