@@ -4,7 +4,7 @@ import { pathToFileURL } from "url";
 import { Logger } from "./Logger";
 import { Color } from "./Color";
 
-export class FileImporter<T> {
+export class ClassImporter<T> {
     public func: (item: T, file: string) => Promise<void>;
     public folderPath: string;
     constructor(folderPath: string, func: (item: T, file: string) => Promise<void>) {
@@ -12,8 +12,8 @@ export class FileImporter<T> {
         this.func = func;
     }
 
-    async load(): Promise<void> {
-        const files = fs.existsSync(this.folderPath) ? fs.readdirSync(this.folderPath) : [];
+    async load(extension: string = '.ts'): Promise<void> {
+        const files = fs.existsSync(this.folderPath) ? fs.readdirSync(this.folderPath).filter(x => x.endsWith(extension)) : [];
 
         for (const file of files) {
             const filePath = path.join(this.folderPath, file);

@@ -4,7 +4,7 @@ import { Logger } from "../utils/Logger";
 import { Color } from "../utils/Color";
 import { CustomClient } from "../utils/CustomClient";
 import { Module } from "base/Module";
-import { FileImporter } from "utils/FileImporter";
+import { ClassImporter } from "utils/ClassImporter";
 import { Command } from "base/Command";
 
 export class CommandLoader extends Loader {
@@ -16,7 +16,7 @@ export class CommandLoader extends Loader {
         Logger.log(`Loading commands from ${Color.Bright}${this.module.name} v${this.module.version}${Color.Reset}...`);
         const folderPath = path.join(this.folderPath, "commands");
 
-        await new FileImporter<Command>(folderPath, async (command: Command, file: string) => {
+        await new ClassImporter<Command>(folderPath, async (command: Command, file: string) => {
             const filePath = path.join(this.folderPath, file);
             if ('data' in command && 'execute' in command) {
                 CustomClient.getInstance().commands.set(command.data.name, command);

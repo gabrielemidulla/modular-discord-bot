@@ -7,4 +7,7 @@ export default class CoreModule extends Module {
     public description = "The core module of the bot.";
     public author = "Gabriele Midulla";
     public version = "1.0.0";
+    public settings = {
+        ping_message: "Ping!",
+    }
 }
